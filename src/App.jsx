@@ -16,7 +16,7 @@ function helpQuery(movies,{ query }) {
 export const App = () => {
   const [query, setQuery] = useState('');
 
-  let visibleMovie = helpQuery(moviesFromServer,{query})
+  let visibleMovies = helpQuery(moviesFromServer,{query})
 
   return (
   <div className="page">
@@ -41,7 +41,7 @@ export const App = () => {
         </div>
       </div>
 
-      <MoviesList movies={visibleMovie} />
+      <MoviesList movies={visibleMovies} />
     </div>
 
     <div className="sidebar">Sidebar goes here</div>
